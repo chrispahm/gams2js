@@ -1,4 +1,4 @@
-# gams2js 
+# gams2js 🐬
 ## A GAMS output file parser for JavaScript
 
 This simple script parses the results of a GAMS job (called output/listing file) and
