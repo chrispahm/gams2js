@@ -5,6 +5,10 @@
   "main": "dist/gams2js.cjs.js",
   "module": "dist/gams2js.esm.js",
   "browser": "dist/gams2js.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrispahm/gams2js.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
