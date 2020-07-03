@@ -1,0 +1,27 @@
+{
+  "name": "gams2js",
+  "version": "0.0.1",
+  "description": "A GAMS output file parser",
+  "main": "dist/gams2js.cjs.js",
+  "module": "dist/gams2js.esm.js",
+  "browser": "dist/gams2js.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "GAMS",
+    "optimization",
+    "modeling",
+    "NEOS"
+  ],
+  "author": "Christoph Pahmeyer <christoph.pahmeyer@uni-bonn.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "rollup": "^2.18.2",
+    "rollup-plugin-terser": "^6.1.0"
+  }
+}

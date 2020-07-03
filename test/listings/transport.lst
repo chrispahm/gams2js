@@ -1,0 +1,111 @@
+Executed on prod-exec-1.neos-server.org
+\fGAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/02/20 02:54:37 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.001 SECONDS      3 MB  31.1.1 r4b06116 LEX-LEG
+\fGAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/02/20 02:54:37 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE transport Using LP From line 45
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           3     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES            7
+NON ZERO ELEMENTS            19
+
+
+GENERATION TIME      =        0.003 SECONDS      4 MB  31.1.1 r4b06116 LEX-LEG
+
+
+EXECUTION TIME       =        0.003 SECONDS      4 MB  31.1.1 r4b06116 LEX-LEG
+\fGAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/02/20 02:54:37 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE transport Using LP From line 45
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   transport           OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  45
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE              153.6750
+
+ RESOURCE USAGE, LIMIT          0.008      1000.000
+ ITERATION COUNT, LIMIT         4    2000000000
+
+IBM ILOG CPLEX   31.1.1 r4b06116 Released May 16, 2020 LEG x86 64bit/Linux    
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Space for names approximately 0.00 Mb
+Use option 'names no' to turn use of names off
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.01 ticks)
+Optimal solution found.
+Objective :         153.675000
+
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU cost            .         .         .        1.000      
+
+  cost  define objective function
+
+---- EQU supply  observe supply limit at plant i
+
+             LOWER     LEVEL     UPPER    MARGINAL
+
+Seattle       -INF    350.000   350.000      EPS       
+San-Diego     -INF    550.000   600.000      .         
+
+---- EQU demand  satisfy demand at market j
+
+            LOWER     LEVEL     UPPER    MARGINAL
+
+New-York   325.000   325.000     +INF      0.225      
+Chicago    300.000   300.000     +INF      0.153      
+Topeka     275.000   275.000     +INF      0.126      
+
+---- VAR x  shipment quantities in cases
+
+                      LOWER     LEVEL     UPPER    MARGINAL
+
+Seattle  .New-York      .       50.000     +INF       .         
+Seattle  .Chicago       .      300.000     +INF       .         
+Seattle  .Topeka        .         .        +INF      0.036      
+San-Diego.New-York      .      275.000     +INF       .         
+San-Diego.Chicago       .         .        +INF      0.009      
+San-Diego.Topeka        .      275.000     +INF       .         
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR z              -INF    153.675     +INF       .         
+
+  z  total transportation costs in thousands of dollars
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.001 SECONDS      2 MB  31.1.1 r4b06116 LEX-LEG
+
+
+USER: NEOS server license                            G200514/0001AS-LNX
+      University of Wisconsin-Madison, Computer Sciences Dept.   DC8499
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /var/lib/condor/execute/dir_31376/gamsexec/MODEL.gms
+Output     /var/lib/condor/execute/dir_31376/gamsexec/solve.lst
