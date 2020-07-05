@@ -5,10 +5,10 @@ This simple script parses the results of a GAMS job (called output/listing file)
 turns them into a JavaScript object. 
 
 The parser can be used in combination with the [neos-js](https://github.com/fruchtfolge/neos-js) package for solving GAMS jobs on the
-NEOS servers, as well as for using GAMS in an [Observable](https://observablehq.com/@observablehq/a-taste-of-observable).
+NEOS servers, as well as for using GAMS in an [Observable](https://observablehq.com/@chrispahm/operations-research-in-observables).
 
 ## What can I use this for?
-Using GAMS in a web-application (or an [Observable](https://observablehq.com/@observablehq/a-taste-of-observable)) allows for writing didactic GAMS models, *without* requiring users (students, reviewers, readers) to install any additional software. 
+Using GAMS in a web-application (or an [Observable](https://observablehq.com/@chrispahm/operations-research-in-observables)) allows for writing didactic GAMS models, *without* requiring users (students, reviewers, readers) to install any additional software. 
 Everything they need is a web browser.
 
 This can make it easier for anyone interested in your research to understand, follow **and run** your model, without the additional overhead of setting up a working environment first.
