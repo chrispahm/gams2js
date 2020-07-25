@@ -19,6 +19,23 @@ export default {
     return listing.split(/Solution Report\s*?SOLVE/)
   },
   
+  fixLinesPW(lines) {
+    // let columnWidthCorrection = 0
+    lines = lines.reduce((arr,line) => {
+      if (line.match(/^\./)) {
+        // line was split due to PW argument
+        // first we update the columnWidthCorrection factor
+        // columnWidthCorrection = arr[arr.length - 1].length
+        // and append to previous one
+        arr[arr.length - 1] += line 
+      } else {
+        arr.push(line)
+      }
+      return arr
+    },[])
+    return lines
+  },
+  
   getColumnWidths(listing) {
     const line = this.splitNewline(listing).find(l => l.includes('LOWER'))
     const lowerToLevel = line.split('LOWER')[1].split('LEVEL')[0].length

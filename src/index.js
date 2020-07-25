@@ -15,6 +15,9 @@ function readSymbols(type,listing,columnWidths) {
   entries.forEach(entry => {
     entry = helpers.removeEmptyLines(entry)
     let lines = helpers.splitNewline(entry)
+    // fix lines that have been split due to GAMS page width 
+    // command line argument, also columnWidths are affected then
+    lines = helpers.fixLinesPW(lines)
     const name = helpers.getSymbolName(entry)
     let interimData = []
     let description = ''
