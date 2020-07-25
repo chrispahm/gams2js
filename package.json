@@ -12,6 +12,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "pretest": "rollup -c",
     "test": "node test/test.js"
   },
   "keywords": [
@@ -23,9 +24,9 @@
   "author": "Christoph Pahmeyer <christoph.pahmeyer@uni-bonn.de>",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-node-resolve": "^8.1.0",
-    "rollup": "^2.18.2",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "rollup": "^2.23.0",
     "rollup-plugin-terser": "^6.1.0"
   }
 }
