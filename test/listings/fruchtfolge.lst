@@ -1,0 +1,452 @@
+Executed on prod-exec-6.neos-server.org
+GAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/24/20 10:13:30 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.001 SECONDS      3 MB  31.1.1 r4b06116 LEX-LEG
+GAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/24/20 10:13:30 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Fruchtfolge Using RMIP From line 610
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          13     SINGLE EQUATIONS          148
+BLOCKS OF VARIABLES          16     SINGLE VARIABLES          117
+NON ZERO ELEMENTS           501     DISCRETE VARIABLES         10
+
+
+GENERATION TIME      =        0.003 SECONDS      5 MB  31.1.1 r4b06116 LEX-LEG
+
+
+EXECUTION TIME       =        0.006 SECONDS      5 MB  31.1.1 r4b06116 LEX-LEG
+GAMS 31.1.1  r4b06116 Released May 16, 2020 LEX-LEG x86 64bit/Linux 07/24/20 10:13:30 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Fruchtfolge Using RMIP From line 610
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Fruchtfolge         OBJECTIVE  v_obje
+     TYPE    RMIP                DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  610
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE           225361.4972
+
+ RESOURCE USAGE, LIMIT          0.005      1000.000
+ ITERATION COUNT, LIMIT         4    2000000000
+
+IBM ILOG CPLEX   31.1.1 r4b06116 Released May 16, 2020 LEG x86 64bit/Linux    
+--- GAMS/Cplex licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Space for names approximately 0.01 Mb
+Use option 'names no' to turn use of names off
+LP status(1): optimal
+Cplex Time: 0.00sec (det. 0.22 ticks)
+Optimal solution found.
+Objective :      225361.497216
+
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU e_obje          .         .         .        1.000      
+---- EQU e_totGM         .         .         .        1.000      
+
+---- EQU e_maxShares  
+
+                LOWER     LEVEL     UPPER    MARGINAL
+
+FieldBeans       -INF      6.774    36.709      .         
+WinterWheat      -INF       .       91.772      .         
+WinterRye        -INF       .       91.772      .         
+WinterBarley     -INF       .       91.772      .         
+Maize            -INF       .      183.546      .         
+WinterRape       -INF       .       36.709      .         
+Potatoes         -INF     36.709    36.709  3201.682      
+Sugarbeets       -INF     36.709    36.709   745.989      
+SilageMaize      -INF     55.286   183.546      .         
+Oats             -INF       .       91.772      .         
+
+---- EQU e_oneCropPlot  
+
+         LOWER     LEVEL     UPPER    MARGINAL
+
+plot1     1.000     1.000     1.000 83705.158      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU e_170_avg      -INF       .      170.000      .         
+
+---- EQU e_storageBal  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan  1500.000  1500.000  1500.000   -12.000      
+manure.feb      .         .         .      -12.000      
+manure.mrz      .         .         .      -12.000      
+manure.apr      .         .         .      -12.000      
+manure.mai      .         .         .      -12.000      
+manure.jun      .         .         .      -12.000      
+manure.jul      .         .         .      -12.000      
+manure.aug      .         .         .      -12.000      
+manure.sep      .         .         .      -12.000      
+manure.okt      .         .         .         EPS       
+manure.nov      .         .         .         EPS       
+manure.dez      .         .         .         EPS       
+solid .jan      .         .         .         .         
+solid .feb      .         .         .    99999.000      
+solid .mrz      .         .         .    99999.000      
+solid .apr      .         .         .    99999.000      
+solid .mai      .         .         .    99999.000      
+solid .jun      .         .         .         .         
+solid .jul      .         .         .         .         
+solid .aug      .         .         .         .         
+solid .sep      .         .         .    99999.000      
+solid .okt      .         .         .         .         
+solid .nov      .         .         .         .         
+solid .dez      .         .         .         .         
+
+---- EQU e_manureSpring  
+
+          LOWER     LEVEL     UPPER    MARGINAL
+
+manure      .         .         .       12.000      
+solid       .         .         .         .         
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU e_manureA~      .         .         .       12.000      
+---- EQU e_solidAu~      .         .         .         .         
+
+---- EQU e_maxStorageCap  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan     -INF   1500.000  1500.000      .         
+manure.feb     -INF   1500.000  1500.000      .         
+manure.mrz     -INF   1500.000  1500.000      .         
+manure.apr     -INF   1500.000  1500.000      .         
+manure.mai     -INF   1500.000  1500.000      .         
+manure.jun     -INF   1500.000  1500.000      .         
+manure.jul     -INF   1500.000  1500.000      .         
+manure.aug     -INF   1500.000  1500.000      EPS       
+manure.sep     -INF   1500.000  1500.000    12.000      
+manure.okt     -INF   1500.000  1500.000      .         
+manure.nov     -INF   1500.000  1500.000      .         
+manure.dez     -INF   1500.000  1500.000      .         
+solid .jan     -INF       .         .    99999.000      
+solid .feb     -INF       .         .         .         
+solid .mrz     -INF       .         .         .         
+solid .apr     -INF       .         .         .         
+solid .mai     -INF       .         .         .         
+solid .jun     -INF       .         .         .         
+solid .jul     -INF       .         .         .         
+solid .aug     -INF       .         .    99999.000      
+solid .sep     -INF       .         .         .         
+solid .okt     -INF       .         .         .         
+solid .nov     -INF       .         .         .         
+solid .dez     -INF       .         .         .         
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- EQU e_efa          6.774     6.774     +INF   -481.293      
+
+---- EQU e_75diversification  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+Maize          -INF     55.286   101.609      .         
+Potatoes       -INF     36.709   101.609      .         
+Sugarbeets     -INF     36.709   101.609      .         
+Oats           -INF       .      101.609      .         
+Legumes        -INF      6.774   101.609      .         
+Wheat          -INF       .      101.609      .         
+Rye            -INF       .      101.609      .         
+Barley         -INF       .      101.609      .         
+Oilseeds       -INF       .      101.609      .         
+
+---- EQU e_95diversification  
+
+                         LOWER     LEVEL     UPPER    MARGINAL
+
+Maize     .Potatoes       -INF     91.996   128.705      .         
+Maize     .Sugarbeets     -INF     91.996   128.705      .         
+Maize     .Oats           -INF     55.286   128.705      .         
+Maize     .Legumes        -INF     62.060   128.705      .         
+Maize     .Wheat          -INF     55.286   128.705      .         
+Maize     .Rye            -INF     55.286   128.705      .         
+Maize     .Barley         -INF     55.286   128.705      .         
+Maize     .Oilseeds       -INF     55.286   128.705      .         
+Potatoes  .Maize          -INF     91.996   128.705      .         
+Potatoes  .Sugarbeets     -INF     73.419   128.705      .         
+Potatoes  .Oats           -INF     36.709   128.705      .         
+Potatoes  .Legumes        -INF     43.483   128.705      .         
+Potatoes  .Wheat          -INF     36.709   128.705      .         
+Potatoes  .Rye            -INF     36.709   128.705      .         
+Potatoes  .Barley         -INF     36.709   128.705      .         
+Potatoes  .Oilseeds       -INF     36.709   128.705      .         
+Sugarbeets.Maize          -INF     91.996   128.705      .         
+Sugarbeets.Potatoes       -INF     73.419   128.705      .         
+Sugarbeets.Oats           -INF     36.709   128.705      .         
+Sugarbeets.Legumes        -INF     43.483   128.705      .         
+Sugarbeets.Wheat          -INF     36.709   128.705      .         
+Sugarbeets.Rye            -INF     36.709   128.705      .         
+Sugarbeets.Barley         -INF     36.709   128.705      .         
+Sugarbeets.Oilseeds       -INF     36.709   128.705      .         
+Oats      .Maize          -INF     55.286   128.705      .         
+Oats      .Potatoes       -INF     36.709   128.705      .         
+Oats      .Sugarbeets     -INF     36.709   128.705      .         
+Oats      .Legumes        -INF      6.774   128.705      .         
+Oats      .Wheat          -INF       .      128.705      .         
+Oats      .Rye            -INF       .      128.705      .         
+Oats      .Barley         -INF       .      128.705      .         
+Oats      .Oilseeds       -INF       .      128.705      .         
+Legumes   .Maize          -INF     62.060   128.705      .         
+Legumes   .Potatoes       -INF     43.483   128.705      .         
+Legumes   .Sugarbeets     -INF     43.483   128.705      .         
+Legumes   .Oats           -INF      6.774   128.705      .         
+Legumes   .Wheat          -INF      6.774   128.705      .         
+Legumes   .Rye            -INF      6.774   128.705      .         
+Legumes   .Barley         -INF      6.774   128.705      .         
+Legumes   .Oilseeds       -INF      6.774   128.705      .         
+Wheat     .Maize          -INF     55.286   128.705      .         
+Wheat     .Potatoes       -INF     36.709   128.705      .         
+Wheat     .Sugarbeets     -INF     36.709   128.705      .         
+Wheat     .Oats           -INF       .      128.705      .         
+Wheat     .Legumes        -INF      6.774   128.705      .         
+Wheat     .Rye            -INF       .      128.705      .         
+Wheat     .Barley         -INF       .      128.705      .         
+Wheat     .Oilseeds       -INF       .      128.705      .         
+Rye       .Maize          -INF     55.286   128.705      .         
+Rye       .Potatoes       -INF     36.709   128.705      .         
+Rye       .Sugarbeets     -INF     36.709   128.705      .         
+Rye       .Oats           -INF       .      128.705      .         
+Rye       .Legumes        -INF      6.774   128.705      .         
+Rye       .Wheat          -INF       .      128.705      .         
+Rye       .Barley         -INF       .      128.705      .         
+Rye       .Oilseeds       -INF       .      128.705      .         
+Barley    .Maize          -INF     55.286   128.705      .         
+Barley    .Potatoes       -INF     36.709   128.705      .         
+Barley    .Sugarbeets     -INF     36.709   128.705      .         
+Barley    .Oats           -INF       .      128.705      .         
+Barley    .Legumes        -INF      6.774   128.705      .         
+Barley    .Wheat          -INF       .      128.705      .         
+Barley    .Rye            -INF       .      128.705      .         
+Barley    .Oilseeds       -INF       .      128.705      .         
+Oilseeds  .Maize          -INF     55.286   128.705      .         
+Oilseeds  .Potatoes       -INF     36.709   128.705      .         
+Oilseeds  .Sugarbeets     -INF     36.709   128.705      .         
+Oilseeds  .Oats           -INF       .      128.705      .         
+Oilseeds  .Legumes        -INF      6.774   128.705      .         
+Oilseeds  .Wheat          -INF       .      128.705      .         
+Oilseeds  .Rye            -INF       .      128.705      .         
+Oilseeds  .Barley         -INF       .      128.705      .         
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR v_obje         -INF  2.2536E+5     +INF       .         
+---- VAR v_totGM        -INF  2.2536E+5     +INF       .         
+
+---- VAR v_devShares  
+
+                LOWER     LEVEL     UPPER    MARGINAL
+
+FieldBeans        .         .      135.479 -1.000E+5      
+WinterWheat       .         .      135.479 -1.000E+5      
+WinterRye         .         .      135.479 -1.000E+5      
+WinterBarley      .         .      135.479 -1.000E+5      
+Maize             .         .      135.479 -1.000E+5      
+WinterRape        .         .      135.479 -1.000E+5      
+Potatoes          .         .      135.479 -9.680E+4      
+Sugarbeets        .         .      135.479 -9.925E+4      
+SilageMaize       .         .      135.479 -1.000E+5      
+Oats              .         .      135.479 -1.000E+5      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR v_devEfa5       .         .        6.774 -9.952E+4      
+---- VAR v_devEfa75      .         .       33.870 -1.000E+5      
+---- VAR v_devEfa95      .         .      135.479 -1.000E+5      
+
+---- VAR v_devOneCrop  
+
+         LOWER     LEVEL     UPPER    MARGINAL
+
+plot1      .         .        1.000 -1.084E+6      
+
+---- VAR v_binCropPlot  
+
+                                  LOWER     LEVEL     UPPER    MARGINAL
+
+plot1.FieldBeans  .0.0.0.false
+.false                              .        0.050     1.000      .         
+plot1.WinterWheat .0.0.0.false
+.false                              .         .        1.000 -1.382E+4      
+plot1.WinterRye   .0.0.0.false
+.false                              .         .        1.000 -5.982E+4      
+plot1.WinterBarley.0.0.0.false
+.false                              .         .        1.000 -2.196E+4      
+plot1.Maize       .0.0.0.false
+.false                              .         .        1.000 -8334.397      
+plot1.WinterRape  .0.0.0.false
+.false                              .         .        1.000 -2.441E+4      
+plot1.Potatoes    .0.0.0.false
+.false                              .        0.271     1.000      .         
+plot1.Sugarbeets  .0.0.0.false
+.false                              .        0.271     1.000      .         
+plot1.SilageMaize .0.0.0.false
+.false                              .        0.408     1.000      .         
+plot1.Oats        .0.0.0.false
+.false                              .         .        1.000 -5.025E+4      
+
+---- VAR v_manExports  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan      .         .        +INF    -12.000      
+manure.feb      .         .        +INF    -12.000      
+manure.mrz      .         .        +INF    -12.000      
+manure.apr      .         .        +INF       .         
+manure.mai      .         .        +INF    -12.000      
+manure.jun      .         .        +INF    -12.000      
+manure.jul      .         .        +INF    -12.000      
+manure.aug      .         .        +INF    -12.000      
+manure.sep      .         .        +INF       .         
+manure.okt      .         .        +INF    -12.000      
+manure.nov      .         .        +INF    -12.000      
+manure.dez      .         .        +INF    -12.000      
+solid .apr      .         .        +INF  -1.000E+5      
+solid .sep      .         .        +INF  -1.000E+5      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR v_170Slack      .         .        +INF  -1.000E+5      
+
+---- VAR v_170PlotSlack  
+
+         LOWER     LEVEL     UPPER    MARGINAL
+
+plot1      .         .        +INF  -2.000E+5      
+
+                       LOWER     LEVEL     UPPER    MARGINAL
+
+---- VAR v_20RedSl~      .         .        +INF  -1.000E+5      
+
+---- VAR v_curStorage  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan      .     1500.000     +INF       .         
+manure.feb      .     1500.000     +INF       .         
+manure.mrz      .     1500.000     +INF       .         
+manure.apr      .     1500.000     +INF       .         
+manure.mai      .     1500.000     +INF       .         
+manure.jun      .     1500.000     +INF       .         
+manure.jul      .     1500.000     +INF       .         
+manure.aug      .     1500.000     +INF       .         
+manure.sep      .     1500.000     +INF       .         
+manure.okt      .     1500.000     +INF       .         
+manure.nov      .     1500.000     +INF       .         
+manure.dez      .     1500.000     +INF       .         
+solid .jan      .         .        +INF       .         
+solid .feb      .         .        +INF       EPS       
+solid .mrz      .         .        +INF       EPS       
+solid .apr      .         .        +INF       EPS       
+solid .mai      .         .        +INF  -1.000E+5      
+solid .jun      .         .        +INF       EPS       
+solid .jul      .         .        +INF       EPS       
+solid .aug      .         .        +INF       .         
+solid .sep      .         .        +INF  -1.000E+5      
+solid .okt      .         .        +INF       EPS       
+solid .nov      .         .        +INF       EPS       
+solid .dez      .         .        +INF       EPS       
+
+---- VAR v_manureSpring  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan      .         .         .         EPS       
+manure.feb      .         .        +INF       .         
+manure.mrz      .         .        +INF       EPS       
+manure.apr      .         .        +INF       EPS       
+manure.mai      .         .        +INF       EPS       
+manure.jun      .         .         .         EPS       
+manure.jul      .         .         .         EPS       
+manure.aug      .         .         .         EPS       
+manure.sep      .         .         .         EPS       
+manure.okt      .         .         .      -12.000      
+manure.nov      .         .         .      -12.000      
+manure.dez      .         .         .      -12.000      
+solid .jan      .         .         .         EPS       
+solid .feb      .         .        +INF  -1.000E+5      
+solid .mrz      .         .        +INF  -1.000E+5      
+solid .apr      .         .        +INF  -1.000E+5      
+solid .mai      .         .        +INF  -1.000E+5      
+solid .jun      .         .         .         EPS       
+solid .jul      .         .         .         EPS       
+solid .aug      .         .         .         EPS       
+solid .sep      .         .         .    -1.000E+5      
+solid .okt      .         .         .         EPS       
+solid .nov      .         .         .         EPS       
+solid .dez      .         .         .         EPS       
+
+---- VAR v_manureAutumn  
+
+          LOWER     LEVEL     UPPER    MARGINAL
+
+manure      .         .        +INF       .         
+solid       .         .        +INF  -1.000E+5      
+
+---- VAR v_manSlack  
+
+              LOWER     LEVEL     UPPER    MARGINAL
+
+manure.jan      .         .        +INF  -1.000E+5      
+manure.feb      .         .        +INF  -1.000E+5      
+manure.mrz      .         .        +INF  -1.000E+5      
+manure.apr      .         .        +INF  -1.000E+5      
+manure.mai      .         .        +INF  -1.000E+5      
+manure.jun      .         .        +INF  -1.000E+5      
+manure.jul      .         .        +INF  -1.000E+5      
+manure.aug      .         .        +INF  -1.000E+5      
+manure.sep      .         .        +INF  -1.000E+5      
+manure.okt      .         .        +INF  -1.000E+5      
+manure.nov      .         .        +INF  -1.000E+5      
+manure.dez      .         .        +INF  -1.000E+5      
+solid .jan      .         .        +INF  -1.000E+5      
+solid .feb      .         .        +INF       .         
+solid .mrz      .         .        +INF       .         
+solid .apr      .         .        +INF       .         
+solid .mai      .         .        +INF       .         
+solid .jun      .         .        +INF  -1.000E+5      
+solid .jul      .         .        +INF  -1.000E+5      
+solid .aug      .         .        +INF  -1.000E+5      
+solid .sep      .         .        +INF       .         
+solid .okt      .         .        +INF  -1.000E+5      
+solid .nov      .         .        +INF  -1.000E+5      
+solid .dez      .         .        +INF  -1.000E+5      
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.001 SECONDS      3 MB  31.1.1 r4b06116 LEX-LEG
+
+
+USER: NEOS server license                            G200514/0001AS-LNX
+      University of Wisconsin-Madison, Computer Sciences Dept.   DC8499
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /var/lib/condor/execute/dir_212841/gamsexec/MODEL.gms
+Output     /var/lib/condor/execute/dir_212841/gamsexec/solve.lst

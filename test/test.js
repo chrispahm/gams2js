@@ -4,9 +4,9 @@ const util = require('util')
 const assert = require('assert')
 
 const read = util.promisify(fs.readFile)
-// const write = util.promisify(fs.writeFile)
+const write = util.promisify(fs.writeFile)
 
-const tests = ['transport']
+const tests = ['transport', 'fruchtfolge']
 
 ;(async () => {
   try {
@@ -19,7 +19,7 @@ const tests = ['transport']
       const solution = gams(listing)
 
       assert.deepEqual(JSON.stringify(solution),expected)
-      // await write(`test/expected/${filename}.json`,JSON.stringify(data),'utf8')
+      //await write(`test/expected/${filename}.json`,JSON.stringify(solution),'utf8')
 
       // test the example in the readme
       if (filename === 'transport') {
