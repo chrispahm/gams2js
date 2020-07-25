@@ -23,10 +23,12 @@ export default [
     input: 'src/index.js',
     output: [{
       file: pkg.main,
+      exports: 'default',
       format: 'cjs'
     },
     {
       file: pkg.module,
+      exports: 'default',
       format: 'es'
     }
     ]
